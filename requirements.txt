@@ -2,23 +2,27 @@ fastapi
 uvicorn
 pydantic
 
-langchain-ollama
+# LangChain (LLM APIs only, no local models)
+langchain
 langchain-groq
 groq
 python-dotenv
-torch
-transformers
 
+# REMOVE local LLM + heavy ML
+# torch
+# transformers
+# langchain-ollama
+
+# Web & search
 requests
 beautifulsoup4
 duckduckgo-search
 
+# Document parsing (lighter subset)
 pdfplumber
-pytesseract
 Pillow
-pandas
 python-docx
 openpyxl
-pyzxing
 
+# Testing
 pytest
