@@ -2,7 +2,7 @@
 ### *The third eye sees intent, not just input*
 
 <p align="center">
-  <img src="frontend/assets/trinetra-logo.png" alt="Trinetra Logo" width="220">
+  <img src="assets/trinetra-logo.png" alt="Trinetra Logo" width="220">
 </p>
 
 ---
