@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRINETRA | AI Security Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->x
+    <canvas id="bgCanvas"></canvas>
+    <div class="digital-fog"></div>
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">
+            <img src="assets/trinetra-logo.png" alt="Trinetra Logo" class="nav-logo-img"> TRINETRA
+        </div>
+        <nav>
+            <ul>
+                <!-- Main Site Pages -->
+                <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-target="about">About</a></li>
+                <li><a href="#services" class="nav-link" data-target="services">Service</a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact"
+                        onclick="event.preventDefault(); navigateTo('contact')">Contact</a></li>
+
+                <!-- Separator -->
+                <li class="nav-separator">|</li>
+
+                <!-- App Tools -->
+                <li><a href="#scanner" class="nav-link app-link" data-target="scanner">Scanner</a></li>
+                <li><a href="#logs" class="nav-link app-link" data-target="logs">Logs</a></li>
+            </ul>
+        </nav>
+        <!-- header-actions removed -->
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- LANDING PAGE CONTAINER (Scrollable) -->
+        <div id="landing-page" class="active-section">
+
+            <!-- HOME / LANDING SECTION -->
+            <section id="home">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <h1 class="glitch-text" data-text="TRINETRA">TRINETRA</h1>
+                        <p class="subtitle">"The third eye sees intent, not just input"<br><span
+                                class="highlight">INTELLIGENCE OBSERVED.</span></p>
+                        <div class="cta-group">
+                            <button class="btn btn-primary" onclick="navigateTo('scanner')">INITIATE SCAN</button>
+                            <button class="btn btn-secondary" onclick="navigateTo('about')">LEARN MORE</button>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <img src="assets/eye.png" alt="Cybernetic Eye" class="hero-visual floating-eye">
+                    </div>
+                </div>
+                <div class="hero-footer">
+
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about">
+                <div class="section-content split-view">
+                    <div class="text-content">
+                        <h2>Trinetra: The <span class="highlight">Third-Eye Framework</span></h2>
+                        <div class="glass-card">
+                            <p><strong>Who We Are:</strong> Trinetra is a prevention-first, agentic defense framework
+                                designed to secure Large Language Models (LLMs) against sophisticated threats. We
+                                provide a proactive "Third-Eye" to continuously detect, isolate, and mitigate malicious
+                                inputs.</p>
+                            <br>
+                            <p><strong>Our Mission:</strong> To enhance the resilience, accuracy, and trustworthiness of
+                                AI systems by shifting from static filtering to intelligent, context-aware protection.
+                            </p>
+                            <br>
+                            <p><strong>The Problem We Solve:</strong> Generative AI systems face rising threats from
+                                <span class="highlight">Prompt Injection</span> and <span class="highlight">Data
+                                    Poisoning</span>. Trinetra solves this by validating data in a secure sandbox
+                                <em>before</em> it ever reaches your main AI model.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="visual-content">
+                        <img src="assets/shield.png" alt="Neural Defense Matrix" class="about-visual glow-image">
+                        <p class="caption">Neural Defense Matrix: Active Threat Filtering</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section id="services">
+                <div class="section-content split-view">
+                    <div class="visual-content">
+                        <img src="assets/network.png" alt="Cybernetic Network Node" class="services-visual glow-image">
+                    </div>
+
+                    <div class="text-content">
+                        <h2>A <span class="highlight">Multi-Layered Defense Pipeline</span></h2>
+                        <div class="grid-2">
+                            <!-- Layer 1 -->
+                            <div class="feature-card">
+                                <div class="icon">🛡️</div>
+                                <h3>Layer 1: Instant Detection</h3>
+                                <p><strong>Instant Prompt Injection Detection.</strong> High-speed Regex filters and
+                                    Keyword Scanners block known malicious patterns and "jailbreak" attempts in 50–100
+                                    ms.</p>
+                            </div>
+                            <!-- Layer 2 -->
+                            <div class="feature-card">
+                                <div class="icon">📦</div>
+                                <h3>Layer 2: Data Validation</h3>
+                                <p><strong>Sandboxed Data Source Validation.</strong> A "Validation Agent" tests
+                                    external data inside an isolated sandbox to prevent hallucinations and PII leaks.
+                                </p>
+                            </div>
+                            <!-- Layer 3 & 4 -->
+                            <div class="feature-card">
+                                <div class="icon">👁️</div>
+                                <h3>Layers 3 & 4: Execution Monitor</h3>
+                                <p><strong>Agentic Execution Monitoring.</strong> We track the LLM's logic flow and
+                                    execute generated code in a secure container to prevent system damage.</p>
+                            </div>
+                            <!-- Layer 5 -->
+                            <div class="feature-card">
+                                <div class="icon">✅</div>
+                                <h3>Layer 5: Output Safety</h3>
+                                <p><strong>Final Output Safety Validator.</strong> The final quality check ensures no
+                                    sensitive information is leaked and content remains helpful and harmless.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CONTACT SECTION -->
+            <section id="contact">
+                <div class="section-content">
+                    <h2 class="type-reveal">Contact <span class="highlight">Trinetra Security</span></h2>
+
+                    <div class="contact-layout">
+                        <!-- Form Side -->
+                        <div class="glass-card contact-form-wrapper">
+                            <h3>Secure Transmission</h3>
+                            <form
+                                onsubmit="event.preventDefault(); alert('Transmission Encrypted & Sent.'); this.reset();">
+                                <div class="form-group">
+                                    <label>Identity / Name</label>
+                                    <input type="text" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Work Email</label>
+                                    <input type="email" placeholder="name@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Organization</label>
+                                    <input type="text" placeholder="Company Name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Inquiry Type</label>
+                                    <select class="cyber-select">
+                                        <option>Request a Demo</option>
+                                        <option>Report a Vulnerability</option>
+                                        <option>Partnership / Investment</option>
+                                        <option>General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Message Payload</label>
+                                    <textarea placeholder="Tell us about your AI security needs..." rows="4"></textarea>
+                                </div>
+
+                                <button class="btn btn-primary full-width">REQUEST ACCESS</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Info Side -->
+                        <div class="contact-info">
+                            <!-- Direct Channels removed -->
+
+                            <div class="info-card glass-card">
+                                <!-- H3 Network Nodes removed -->
+                                <div class="social-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">GitHub <span class="arrow">↗</span></a>
+                                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">LinkedIn <span class="arrow">↗</span></a>
+                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">X / Twitter <span class="arrow">↗</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 40px; text-align: center; width: 100%; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono);">
+                        © 2026 TRINETRA™. All Rights Reserved.<br>
+                        Unauthorized access, reproduction, or distribution is strictly prohibited.
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- End of #landing-page -->
+
+        <!-- SCANNER SECTION (Separate View) -->
+        <section id="scanner">
+            <div class="section-content split-view">
+                <div class="scanner-interface">
+                    <h2 class="type-reveal"><span class="icon">◈</span> SYSTEM SCANNER</h2>
+                    <p class="instruction">Enter data payload, paste text, or upload a file for vulnerability assessment.</p>
+
+                    <div class="input-area">
+                        <div class="textarea-wrapper">
+                            <textarea id="scannerInput"
+                                placeholder="root@system:~$ Enter command, paste content, or click ⇪ to upload a file for analysis..."></textarea>
+
+                            <!-- Upload Button (positioned inside wrapper) -->
+                            <div class="upload-trigger" id="uploadTrigger" title="Upload File (.txt, .pdf, .json, .csv, .md, .js, .py)">
+                                <span class="icon">⇪</span>
+                            </div>
+                        </div>
+                        <input type="file" id="fileInput" accept=".txt,.pdf,.json,.csv,.md,.js,.py,.html,.css,.xml,.log" style="display: none;">
+                        <div class="actions">
+                            <button id="analyzeBtn" class="btn btn-primary">
+                                <span class="btn-text">RUN DIAGNOSTICS</span>
+                                <span class="btn-loader"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="analysisOutput" class="analysis-output hidden">
+                        <div class="output-header">
+                            <span class="terminal-title">ANALYSIS_RESULT_LOG.txt</span>
+                            <span class="close-output">×</span>
+                        </div>
+                        <div class="output-body">
+                            <div id="typingContainer"></div>
+                            <!-- Cursor removed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="scanner-visuals">
+                    <div class="radar-scan">
+                        <div class="scan-line"></div>
+                    </div>
+                    <!-- status-panel removed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECURITY DASHBOARD SECTION (Separate View) -->
+        <section id="logs">
+            <div class="section-content">
+                <h2><span class="icon">≣</span> SECURITY DASHBOARD</h2>
+
+                <div class="dashboard-grid">
+                    <div class="stat-card clickable" onclick="switchTab('safe')">
+                        <h3>SAFE WEBSITES</h3>
+                        <div class="number" id="stats-safe">0</div>
+                        <div class="trend up">✅ Trusted Sources</div>
+                    </div>
+                    <div class="stat-card clickable" onclick="switchTab('threats')">
+                        <h3>THREATS BLOCKED</h3>
+                        <div class="number" id="stats-threats">0</div>
+                        <div class="trend down">❌ Rejected URLs</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>TOTAL SCANS</h3>
+                        <div class="number" id="stats-scans">0</div>
+                        <div class="trend stable">📊 All Time</div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="url-tabs">
+                    <button class="tab-btn active" id="tabSafe" onclick="switchTab('safe')">🟢 Safe Websites</button>
+                    <button class="tab-btn" id="tabThreats" onclick="switchTab('threats')">🔴 Threats Blocked</button>
+                </div>
+
+                <!-- URL List -->
+                <div class="url-list-container">
+                    <div class="url-list" id="urlList">
+                        <div class="empty-state">Run a scan to see URL classifications</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- particles.js removed -->
+    <div class="crt-overlay"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
